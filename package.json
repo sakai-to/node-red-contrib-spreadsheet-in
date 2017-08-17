@@ -1,0 +1,32 @@
+{
+  "name": "node-red-contrib-spreadsheet-in",
+  "version": "1.0.0",
+  "description": "Node-RED node to read a spreadsheet",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sakai-to/node-red-contrib-spreadsheet-in.git"
+  },
+  "keywords": [
+    "node-red",
+    "spreadsheet",
+    "excel"
+  ],
+  "author": "sakai.to",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sakai-to/node-red-contrib-spreadsheet-in/issues"
+  },
+  "homepage": "https://github.com/sakai-to/node-red-contrib-spreadsheet-in#readme",
+  "node-red": {
+    "nodes": {
+      "spreadsheet-in": "node.js"
+    }
+  },
+  "dependencies": {
+    "xlsx": "^0.11.2"
+  }
+}
