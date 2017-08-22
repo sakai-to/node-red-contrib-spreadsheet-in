@@ -1,6 +1,6 @@
 <script type="text/javascript">
-    RED.nodes.registerType('spreadsheet-in',{
-        category: 'function',
+    RED.nodes.registerType('book',{
+        category: 'Spreadsheet',
         color: '#a6bbcf',
         defaults: {
             name: {value:""}
@@ -9,18 +9,18 @@
         outputs:1,
         icon: "file.png",
         label: function() {
-            return this.name||"spreadsheet-in";
+            return this.name||"book";
         }
     });
 </script>
 
-<script type="text/x-red" data-template-name="spreadsheet-in">
+<script type="text/x-red" data-template-name="book">
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="spreadsheet-in">
-    <p>A node that converts the message payloads into spreadsheet object.</p>
+<script type="text/x-red" data-help-name="book">
+    <p>A node that converts <code>msg.payload</code> from <code>Buffer</code> to a workbook object.</p>
 </script>

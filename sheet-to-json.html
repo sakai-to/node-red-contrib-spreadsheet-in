@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('sheet-to-json',{
+        category: 'Spreadsheet',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+			range: {value:"", required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"sheet to json";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="sheet-to-json">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-range"><i class="icon-tag"></i> Range</label>
+        <input type="text" id="node-input-range" placeholder="A1:B2">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="sheet-to-json">
+    <p>A node that converts a specified range of a sheet object to json object.</p>
+</script>

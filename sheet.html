@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('sheet',{
+        category: 'Spreadsheet',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+			sheetName: {value:"Sheet1", required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"sheet";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="sheet">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-sheetName"><i class="icon-tag"></i> Sheet name</label>
+        <input type="text" id="node-input-sheetName" placeholder="Sheet1">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="sheet">
+    <p>A node that picks a sheet object from a workbook object.</p>
+</script>

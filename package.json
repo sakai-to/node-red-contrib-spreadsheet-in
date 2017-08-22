@@ -23,7 +23,10 @@
   "homepage": "https://github.com/sakai-to/node-red-contrib-spreadsheet-in#readme",
   "node-red": {
     "nodes": {
-      "spreadsheet-in": "node.js"
+      "book": "book.js",
+      "sheet": "sheet.js",
+      "cell": "cell.js",
+      "sheet-to-json": "sheet-to-json.js"
     }
   },
   "dependencies": {
