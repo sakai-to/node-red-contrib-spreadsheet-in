@@ -1,3 +1,7 @@
 # node-red-contrib-spreadsheet-in
 
-A Node-RED node to read a spreadsheet.
+This package provides Node-RED nodes to read data from spreadsheet (Excel, ODS, etc.) file.
+
+## Example
+
+[example](example.png)

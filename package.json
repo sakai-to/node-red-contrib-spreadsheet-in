@@ -1,7 +1,7 @@
 {
   "name": "node-red-contrib-spreadsheet-in",
-  "version": "0.0.1",
-  "description": "Node-RED node to read a spreadsheet",
+  "version": "0.1.0",
+  "description": "This package provides Node-RED nodes to read data from spreadsheet (Excel, ODS, etc.) file.",
   "main": "node.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
