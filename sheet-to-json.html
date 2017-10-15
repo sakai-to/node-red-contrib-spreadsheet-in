@@ -4,7 +4,10 @@
         color: '#a6bbcf',
         defaults: {
             name: {value:""},
-			range: {value:"", required:true}
+            raw: {value:"false", required:true},
+			range: {value:""},
+            header: {value:"default", required:true},
+            blankrows: {value:false, required:true}
         },
         inputs:1,
         outputs:1,
@@ -21,8 +24,28 @@
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
     <div class="form-row">
+        <label for="node-input-raw"><i class="icon-tag"></i> Output values' type</label>
+        <select id="node-input-raw">
+            <option value="false">Formatted text</option>
+            <option value="true">Raw values</option>
+        </select>
+    </div>
+    <div class="form-row">
         <label for="node-input-range"><i class="icon-tag"></i> Range</label>
         <input type="text" id="node-input-range" placeholder="A1:B2">
+    </div>
+    <div class="form-row">
+        <label for="node-input-header"><i class="icon-tag"></i> Header</label>
+        <select id="node-input-header" style="width: 70%">
+            <option value="1">Generate an array of arrays</option>
+            <option value="A">Row object keys are literal column labels</option>
+            <option value="default">Read and disambiguate first row as keys</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label><i class="icon-tag"></i> Blank rows</label>
+        <input type="checkbox" id="node-input-blankrows" style="width:auto">
+        <label for="node-input-blankrows" style="width:auto">Include blank lines in the output</label>
     </div>
 </script>
 
