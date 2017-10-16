@@ -6,7 +6,9 @@ module.exports = function(RED) {
 		var node = this;
 		node.on('input', function(msg) {
 			var cell = msg.payload && msg.payload[config.address];
-			msg.payload = cell && cell.w && cell.v;
+			msg.payload = config.outputType
+				? cell[config.outputType]
+				: cell;
 			node.send(msg);
 		});
 	}
