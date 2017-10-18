@@ -5,8 +5,14 @@ module.exports = function(RED) {
 		RED.nodes.createNode(this,config);
 		var node = this;
 		node.on('input', function(msg) {
-			var cell = msg.payload && msg.payload[config.address];
-			msg.payload = config.outputType
+			var address = config.address || msg.address;
+			if (!address) {
+				return node.error("Cell address not specified");
+			} else if (!/[A-Z]+[1-9][0-9]*/.test(address)) {
+				return node.error("Invalid cell address: " + address);
+			}
+			var cell = msg.payload && msg.payload[address];
+			msg.payload = cell && config.outputType
 				? cell[config.outputType]
 				: cell;
 			node.send(msg);
