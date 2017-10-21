@@ -50,5 +50,32 @@
 </script>
 
 <script type="text/x-red" data-help-name="sheet-to-json">
-    <p>A node that converts a specified range of a sheet object to json object.</p>
+    <p>Converts a sheet object to an array of JSON objects.</p>
+
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">object</span>
+        </dt>
+        <dd>a sheet object from a sheet node.</dd>
+    </dl>
+
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">object</span></dt>
+        <dd>an array of objects which represents cell values in the sheet object.</dd>
+    </dl>
+
+    <h3>Details</h3>
+    <p>This node generates different types of JS objects. This node takes the following properties.</p>
+    <p>The Data type property controls cell values to use raw values or formatted strings.</p>
+    <p>The Range property can be set A1-style cell range. If the Range property is blank, the sheet range is used.</p>
+    <p>The Header property controls output format.</p>
+    <p>The Blank rows property controls to include blank lines in the output.</p>
+    
+    <h3>References</h3>
+    <ul>
+        <li><a href="https://sheetjs.gitbooks.io/docs/#sheetjs-js-xlsx" target="_blank">SheetJS js-xlsx</a> - full description of js-xlsx which this node is based on.</li>
+        <li><a href="https://github.com/sakai-to/node-red-contrib-spreadsheet-in" target="_blank">GitHub</a> - the nodes github repository.</li>
+    </ul>
 </script>
