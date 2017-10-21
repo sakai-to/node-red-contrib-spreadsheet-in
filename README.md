@@ -2,8 +2,15 @@
 
 This package provides Node-RED nodes to read data from spreadsheet (Excel, ODS, etc.) file.
 
-## Example
+## Usage
 
-```json
-[{"id":"9d4b3531.391338","type":"inject","z":"82c72b22.7e2728","name":"","topic":"","payload":"","payloadType":"date","repeat":"","crontab":"","once":false,"x":100,"y":40,"wires":[["1ef482ff.54be1d"]]},{"id":"1ef482ff.54be1d","type":"file in","z":"82c72b22.7e2728","name":"read a spreadsheet file as binary buffer","filename":"","format":"","chunk":false,"sendError":false,"x":370,"y":40,"wires":[["58da0822.79c4a8"]]},{"id":"58da0822.79c4a8","type":"book","z":"82c72b22.7e2728","name":"","x":270,"y":100,"wires":[["8bd99783.125c38","ed8b8fb2.0d17c"]]},{"id":"ed8b8fb2.0d17c","type":"sheet","z":"82c72b22.7e2728","name":"","sheetName":"Sheet1","x":270,"y":160,"wires":[["f0303664.0d9938","9c0ed110.bc235","fe9e8ba9.f59db8"]]},{"id":"f0303664.0d9938","type":"cell","z":"82c72b22.7e2728","name":"","address":"A1","x":430,"y":220,"wires":[["99f7011e.3ecda"]]},{"id":"9c0ed110.bc235","type":"sheet-to-json","z":"82c72b22.7e2728","name":"","range":"A1:B2","x":450,"y":280,"wires":[["4c28547e.6d566c"]]},{"id":"8bd99783.125c38","type":"debug","z":"82c72b22.7e2728","name":"","active":true,"console":"false","complete":"payload.SheetNames","x":600,"y":100,"wires":[]},{"id":"99f7011e.3ecda","type":"debug","z":"82c72b22.7e2728","name":"","active":true,"console":"false","complete":"false","x":650,"y":220,"wires":[]},{"id":"4c28547e.6d566c","type":"debug","z":"82c72b22.7e2728","name":"","active":true,"console":"false","complete":"false","x":650,"y":280,"wires":[]},{"id":"fe9e8ba9.f59db8","type":"debug","z":"82c72b22.7e2728","name":"","active":true,"console":"false","complete":"false","x":650,"y":160,"wires":[]}]
-```
+See the following screenshot:
+
+![example flow](https://raw.githubusercontent.com/sakai-to/node-red-contrib-spreadsheet-in/master/examples/example.png "Example flow")
+
+You can also import the example flow from `examples/example.json` to your Node-RED.
+
+## ToDo
+
+- Add useful properties for nodes
+- Internationalization for labels
