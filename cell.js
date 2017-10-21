@@ -11,9 +11,10 @@ module.exports = function(RED) {
 			} else if (!/[A-Z]+[1-9][0-9]*/.test(address)) {
 				return node.error("Invalid cell address: " + address);
 			}
+
 			var cell = msg.payload && msg.payload[address];
-			msg.payload = cell && config.outputType
-				? cell[config.outputType]
+			msg.payload = cell && config.dataType
+				? cell[config.dataType]
 				: cell;
 			node.send(msg);
 		});
