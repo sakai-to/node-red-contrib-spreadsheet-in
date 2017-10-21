@@ -12,5 +12,6 @@ You can also import the example flow from `examples/example.json` to your Node-R
 
 ## ToDo
 
+- Add functionality to specify cell address for cell node or sheet range for sheet-to-json node by using <code>msg</code> object. 
 - Add useful properties for nodes
 - Internationalization for labels
