@@ -6,6 +6,11 @@ module.exports = function(RED) {
 		var node = this;
 		node.on('input', function(msg) {
 			var address = config.address;
+			if(msg.selectAddress)
+			{
+				address=msg.selectAddress;
+				delete msg.selectAddress;
+			}
 			if (!address) {
 				return node.error("Cell address not specified");
 			} else if (!/[A-Z]+[1-9][0-9]*/.test(address)) {
@@ -16,6 +21,7 @@ module.exports = function(RED) {
 			msg.payload = cell && config.dataType
 				? cell[config.dataType]
 				: cell;
+			msg.selectedAddress = address;
 			node.send(msg);
 		});
 	}

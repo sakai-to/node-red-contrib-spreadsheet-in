@@ -21,7 +21,13 @@ module.exports = function(RED) {
 				defval: undefined,
 				blankrows: config.blankrows == "true"
 			};
+			if(msg.selectRange)
+			{
+				option.range=msg.selectRange;
+				delete msg.selectRange;
+			}
 			msg.payload = XLSX.utils.sheet_to_json(msg.payload, option);
+			msg.selectedRange=option.range;
 			node.send(msg);
 		});
 	}
