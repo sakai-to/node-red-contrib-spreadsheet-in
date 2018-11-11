@@ -5,15 +5,10 @@ module.exports = function(RED) {
 		RED.nodes.createNode(this,config);
 		var node = this;
 		node.on('input', function(msg) {
-			var selectSheetName=config.sheetName;
-			if(msg.selectSheetName)
-			{
-				selectSheetName=msg.selectSheetName;
-				delete msg.selectSheetName;
-			}
-			selectSheetName=msg.selectSheetName;
-			msg.payload = msg.payload.Sheets && msg.payload.Sheets[config.sheetName];
-			msg.selectedSheetName = selectSheetName;	
+			var sheetName = config.sheetName || msg.selectSheetName;
+			delete msg.selectSheetName;
+			msg.payload = msg.payload.Sheets && msg.payload.Sheets[sheetName];
+			msg.selectedSheetName = sheetName;
 			node.send(msg);
 		});
 	}
