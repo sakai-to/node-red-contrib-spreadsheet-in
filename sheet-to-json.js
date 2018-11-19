@@ -15,7 +15,7 @@ module.exports = function(RED) {
 		node.on('input', function(msg) {
 			var option = {
 				raw: config.raw == "true",
-				range: config.range || msg.selectRange || "!ref",
+				range: config.range || msg.selectRange,
 				header: convertHeaderParam(config.header),
 				dateNF: undefined,
 				defval: undefined,
