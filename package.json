@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-spreadsheet-in",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "This package provides Node-RED nodes to read data from spreadsheet (Excel, ODS, etc.) file.",
   "main": "node.js",
   "scripts": {
