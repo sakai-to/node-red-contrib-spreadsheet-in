@@ -4,7 +4,7 @@
   "description": "This package provides Node-RED nodes to read data from spreadsheet (Excel, ODS, etc.) file.",
   "main": "node.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha \"test/**/*_spec.js\""
   },
   "repository": {
     "type": "git",
@@ -31,5 +31,11 @@
   },
   "dependencies": {
     "xlsx": "^0.11.2"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "node-red": "^0.18.4",
+    "node-red-node-test-helper": "^0.1.8",
+    "should": "^13.2.3"
   }
 }
