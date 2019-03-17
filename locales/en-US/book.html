@@ -1,0 +1,27 @@
+<script type="text/x-red" data-help-name="book">
+    <p>Converts the contents of a spreadsheet file to a workbook object.</p>
+
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">Buffer</span>
+        </dt>
+        <dd>a Buffer object of the contents of a spreadsheet file.</dd>
+    </dl>
+
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">object</span></dt>
+        <dd>a workbook object decoded from the Buffer object.</dd>
+    </dl>
+
+    <h3>Details</h3>
+    <p>If you want to read a spreadsheet file using file-in node, you should set the Output type property of the file-in node should be set to binary buffer.
+        Otherwise, you will get an error in this node.</p>
+
+    <h3>References</h3>
+    <ul>
+        <li><a href="https://sheetjs.gitbooks.io/docs/#sheetjs-js-xlsx" target="_blank">SheetJS js-xlsx</a> - full description of js-xlsx which this node is based on.</li>
+        <li><a href="https://github.com/sakai-to/node-red-contrib-spreadsheet-in" target="_blank">GitHub</a> - the nodes github repository.</li>
+    </ul>
+</script>

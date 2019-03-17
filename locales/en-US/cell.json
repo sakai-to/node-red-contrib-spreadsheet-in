@@ -1,0 +1,28 @@
+{
+    "cell": {
+        "label": {
+            "address": "Cell address",
+            "dataType": "Data type"
+        },
+        "placeholder": {
+            "address": "A1"
+        },
+        "dataType": {
+            "v": "raw value",
+            "w": "formatted text",
+            "t": "cell type",
+            "f": "cell formula",
+            "F": "range of enclosing array",
+            "h": "HTML rendering of the rich text",
+            "c": "comments associated with the cell",
+            "z": "number format string",
+            "l": "cell hyperlink object",
+            "s": "the style/theme of the cell",
+            "none": "xlsx cell object"
+        },
+        "errors": {
+            "no-address": "Cell address not specified",
+            "invalid-address": "Invalid cell address"
+        }
+    }
+}

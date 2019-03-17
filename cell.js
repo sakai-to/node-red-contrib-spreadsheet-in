@@ -8,9 +8,9 @@ module.exports = function(RED) {
 			var address = config.address || msg.selectAddress;
 			delete msg.selectAddress;
 			if (!address) {
-				return node.error("Cell address not specified");
+				return node.error(RED._("cell.errors.no-address"));
 			} else if (!/[A-Z]+[1-9][0-9]*/.test(address)) {
-				return node.error("Invalid cell address: " + address);
+				return node.error(RED._("cell.errors.invalid-address") + ": " + address);
 			}
 
 			var cell = msg.payload && msg.payload[address];

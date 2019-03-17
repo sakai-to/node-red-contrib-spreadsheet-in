@@ -20,66 +20,31 @@
 
 <script type="text/x-red" data-template-name="sheet-to-json">
     <div class="form-row">
-        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
+        <label for="node-input-name"><i class="icon-tag"></i> <span data-i18n="node-red:common.label.name"></span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
     </div>
     <div class="form-row">
-        <label for="node-input-raw"><i class="icon-tag"></i> Data type</label>
+        <label for="node-input-raw"><i class="icon-tag"></i> <span data-i18n="sheet-to-json.label.raw"></span></label>
         <select id="node-input-raw">
-            <option value="false">Formatted text</option>
-            <option value="true">Raw values</option>
+            <option value="false" data-i18n="sheet-to-json.raw.false"></option>
+            <option value="true" data-i18n="sheet-to-json.raw.true"></option>
         </select>
     </div>
     <div class="form-row">
-        <label for="node-input-range"><i class="icon-tag"></i> Range</label>
-        <input type="text" id="node-input-range" placeholder="A1:B2">
+        <label for="node-input-range"><i class="icon-tag"></i> <span data-i18n="sheet-to-json.label.range"></span></label>
+        <input type="text" id="node-input-range" data-i18n="[placeholder]sheet-to-json.placeholder.range">
     </div>
     <div class="form-row">
-        <label for="node-input-header"><i class="icon-tag"></i> Header</label>
+        <label for="node-input-header"><i class="icon-tag"></i> <span data-i18n="sheet-to-json.label.header"></span></label>
         <select id="node-input-header" style="width: 70%">
-            <option value="1">Generate an array of arrays</option>
-            <option value="A">Row object keys are literal column labels</option>
-            <option value="default">Read and disambiguate first row as keys</option>
+            <option value="1" data-i18n="sheet-to-json.header.1"></option>
+            <option value="A" data-i18n="sheet-to-json.header.A"></option>
+            <option value="default" data-i18n="sheet-to-json.header.default"></option>
         </select>
     </div>
     <div class="form-row">
-        <label><i class="icon-tag"></i> Blank rows</label>
+        <label><i class="icon-tag"></i> <span data-i18n="sheet-to-json.label.blankrows"></span></label>
         <input type="checkbox" id="node-input-blankrows" style="width:auto">
-        <label for="node-input-blankrows" style="width:auto">Include blank lines in the output</label>
+        <label for="node-input-blankrows" style="width:auto" data-i18n="sheet-to-json.blankrows.include"></label>
     </div>
-</script>
-
-<script type="text/x-red" data-help-name="sheet-to-json">
-    <p>Converts a sheet object to an array of JSON objects.</p>
-
-    <h3>Inputs</h3>
-    <dl class="message-properties">
-        <dt>payload
-            <span class="property-type">object</span>
-        </dt>
-        <dd>a sheet object from a sheet node.</dd>
-        <dt class="optional">selectRange <span class="property-type">string</span></dt>
-        <dd>If the Range property is not configured in the node, this optional property sets an A-1 based range.</dd>
-    </dl>
-
-    <h3>Outputs</h3>
-    <dl class="message-properties">
-        <dt>payload <span class="property-type">object</span></dt>
-        <dd>an array of objects which represents cell values in the sheet object.</dd>
-        <dt>selectedRange <span class="property-type">string</span></dt>
-        <dd>the A-1 based range.</dd>
-    </dl>
-
-    <h3>Details</h3>
-    <p>This node generates different types of JS objects. This node takes the following properties.</p>
-    <p>The Data type property controls cell values to use raw values or formatted strings.</p>
-    <p>The Range property or <code>msg.selectRange</code> property can be set an A-1 based range. If both are blank or undefined, the sheet range is used.</p>
-    <p>The Header property controls output format.</p>
-    <p>The Blank rows property controls to include blank lines in the output.</p>
-    
-    <h3>References</h3>
-    <ul>
-        <li><a href="https://sheetjs.gitbooks.io/docs/#sheetjs-js-xlsx" target="_blank">SheetJS js-xlsx</a> - full description of js-xlsx which this node is based on.</li>
-        <li><a href="https://github.com/sakai-to/node-red-contrib-spreadsheet-in" target="_blank">GitHub</a> - the nodes github repository.</li>
-    </ul>
 </script>

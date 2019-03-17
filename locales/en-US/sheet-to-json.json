@@ -1,0 +1,25 @@
+{
+    "sheet-to-json": {
+        "label": {
+            "raw": "Data type",
+            "range": "Range",
+            "header": "Header",
+            "blankrows": "Blank rows"
+        },
+        "placeholder": {
+            "range": "A1:B2"
+        },
+        "raw": {
+            "false": "Formatted text",
+            "true": "Raw values"
+        },
+        "header": {
+            "1": "Generate an array of arrays",
+            "A": "Row object keys are literal column labels",
+            "default": "Read and disambiguate first row as keys"
+        },
+        "blankrows": {
+            "include": "Include blank lines in the output"
+        }
+    }
+}

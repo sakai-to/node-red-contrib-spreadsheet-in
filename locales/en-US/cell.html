@@ -1,0 +1,31 @@
+<script type="text/x-red" data-help-name="cell">
+    <p>Picks a cell value from a sheet object.</p>
+
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">object</span>
+        </dt>
+        <dd>a sheet object from a sheet node.</dd>
+        <dt class="optional">selectAddress <span class="property-type">string</span></dt>
+        <dd>If the Address property is not configured in the node, this optional property sets an A1-style cell address.</dd>
+    </dl>
+
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">any</span></dt>
+        <dd>the cell value as selecting the Data type property.</dd>
+        <dt>selectedAddress <span class="property-type">string</span></dt>
+        <dd>The A1-style address of the cell which the value is picked from.</dd>
+    </dl>
+
+    <h3>Details</h3>
+    <p>The Address proprty or <code>msg.selectAddress</code> property should be set an A1-style cell address.</p>
+    <p>Regarding the details for the Data type property, please see the <a href="https://sheetjs.gitbooks.io/docs/#cell-object" target="_blank">description of js-xlsx</a>.</p>
+
+    <h3>References</h3>
+    <ul>
+        <li><a href="https://sheetjs.gitbooks.io/docs/#sheetjs-js-xlsx" target="_blank">SheetJS js-xlsx</a> - full description of js-xlsx which this node is based on.</li>
+        <li><a href="https://github.com/sakai-to/node-red-contrib-spreadsheet-in" target="_blank">GitHub</a> - the nodes github repository.</li>
+    </ul>
+</script>

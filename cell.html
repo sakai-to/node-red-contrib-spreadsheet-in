@@ -18,60 +18,27 @@
 
 <script type="text/x-red" data-template-name="cell">
     <div class="form-row">
-        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
+        <label for="node-input-name"><i class="icon-tag"></i> <span data-i18n="node-red:common.label.name"></span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
     </div>
     <div class="form-row">
-        <label for="node-input-address"><i class="icon-tag"></i> Cell address</label>
-        <input type="text" id="node-input-address" placeholder="A1">
+        <label for="node-input-address"><i class="icon-tag"></i> <span data-i18n="cell.label.address"></span></label>
+        <input type="text" id="node-input-address" data-i18n="[placeholder]cell.placeholder.address">
     </div>
     <div class="form-row">
-        <label for="node-input-dataType"><i class="icon-tag"></i> Data type</label>
+        <label for="node-input-dataType"><i class="icon-tag"></i> <span data-i18n="cell.label.dataType"></span></label>
         <select id="node-input-dataType" style="width:70%">
-            <option value="v">raw value</option>
-            <option value="w">formatted text</option>
-            <option value="t">cell type</option>
-            <option value="f">cell formula</option>
-            <option value="F">range of enclosing array</option>
-            <option value="r">rich text encoding</option>
-            <option value="h">HTML rendering of the rich text</option>
-            <option value="c">comments associated with the cell</option>
-            <option value="z">number format string</option>
-            <option value="l">cell hyperlink object</option>
-            <option value="s">the style/theme of the cell</option>
-            <option value="">xlsx cell object</option>
+            <option value="v" data-i18n="cell.dataType.v"></option>
+            <option value="w" data-i18n="cell.dataType.w"></option>
+            <option value="t" data-i18n="cell.dataType.t"></option>
+            <option value="f" data-i18n="cell.dataType.f"></option>
+            <option value="F" data-i18n="cell.dataType.F"></option>
+            <option value="h" data-i18n="cell.dataType.h"></option>
+            <option value="c" data-i18n="cell.dataType.c"></option>
+            <option value="z" data-i18n="cell.dataType.z"></option>
+            <option value="l" data-i18n="cell.dataType.l"></option>
+            <option value="s" data-i18n="cell.dataType.s"></option>
+            <option value="" data-i18n="cell.dataType.none"></option>
         </select>
     </div>
-</script>
-
-<script type="text/x-red" data-help-name="cell">
-    <p>Picks a cell value from a sheet object.</p>
-
-    <h3>Inputs</h3>
-    <dl class="message-properties">
-        <dt>payload
-            <span class="property-type">object</span>
-        </dt>
-        <dd>a sheet object from a sheet node.</dd>
-        <dt class="optional">selectAddress <span class="property-type">string</span></dt>
-        <dd>If the Address property is not configured in the node, this optional property sets an A1-style cell address.</dd>
-    </dl>
-
-    <h3>Outputs</h3>
-    <dl class="message-properties">
-        <dt>payload <span class="property-type">any</span></dt>
-        <dd>the cell value as selecting the Data type property.</dd>
-        <dt>selectedAddress <span class="property-type">string</span></dt>
-        <dd>The A1-style address of the cell which the value is picked from.</dd>
-    </dl>
-
-    <h3>Details</h3>
-    <p>The Address proprty or <code>msg.selectAddress</code> property should be set an A1-style cell address.</p>
-    <p>Regarding the details for the Data type property, please see the <a href="https://sheetjs.gitbooks.io/docs/#cell-object" target="_blank">description of js-xlsx</a>.</p>
-
-    <h3>References</h3>
-    <ul>
-        <li><a href="https://sheetjs.gitbooks.io/docs/#sheetjs-js-xlsx" target="_blank">SheetJS js-xlsx</a> - full description of js-xlsx which this node is based on.</li>
-        <li><a href="https://github.com/sakai-to/node-red-contrib-spreadsheet-in" target="_blank">GitHub</a> - the nodes github repository.</li>
-    </ul>
 </script>

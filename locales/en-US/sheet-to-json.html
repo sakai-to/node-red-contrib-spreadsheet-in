@@ -1,0 +1,34 @@
+<script type="text/x-red" data-help-name="sheet-to-json">
+    <p>Converts a sheet object to an array of JSON objects.</p>
+
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">object</span>
+        </dt>
+        <dd>a sheet object from a sheet node.</dd>
+        <dt class="optional">selectRange <span class="property-type">string</span></dt>
+        <dd>If the Range property is not configured in the node, this optional property sets an A-1 based range.</dd>
+    </dl>
+
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">object</span></dt>
+        <dd>an array of objects which represents cell values in the sheet object.</dd>
+        <dt>selectedRange <span class="property-type">string</span></dt>
+        <dd>the A-1 based range.</dd>
+    </dl>
+
+    <h3>Details</h3>
+    <p>This node generates different types of JS objects. This node takes the following properties.</p>
+    <p>The Data type property controls cell values to use raw values or formatted strings.</p>
+    <p>The Range property or <code>msg.selectRange</code> property can be set an A-1 based range. If both are blank or undefined, the sheet range is used.</p>
+    <p>The Header property controls output format.</p>
+    <p>The Blank rows property controls to include blank lines in the output.</p>
+    
+    <h3>References</h3>
+    <ul>
+        <li><a href="https://sheetjs.gitbooks.io/docs/#sheetjs-js-xlsx" target="_blank">SheetJS js-xlsx</a> - full description of js-xlsx which this node is based on.</li>
+        <li><a href="https://github.com/sakai-to/node-red-contrib-spreadsheet-in" target="_blank">GitHub</a> - the nodes github repository.</li>
+    </ul>
+</script>

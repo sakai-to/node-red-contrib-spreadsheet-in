@@ -1,0 +1,30 @@
+<script type="text/x-red" data-help-name="sheet">
+    <p>Picks a sheet object from a workbook object.</p>
+
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">object</span>
+        </dt>
+        <dd>a workbook object from a book node.</dd>
+        <dt class="optional">selectSheetName <span class="property-type">string</span></dt>
+        <dd>If the Sheet name property is not configured in the node, this optional property sets a sheet name.</dd>
+    </dl>
+
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">object</span></dt>
+        <dd>an object of a sheet which is named by the Sheet name property.</dd>
+        <dt>selectedSheetName <span class="property-type">string</span></dt>
+        <dd>the selected sheet name.</dd>
+    </dl>
+
+    <h3>Details</h3>
+    <p>The Sheet name property or <code>msg.selectSheetName</code> property should be set the name of a sheet to pick from the workbook object.</p>
+
+    <h3>References</h3>
+    <ul>
+        <li><a href="https://sheetjs.gitbooks.io/docs/#sheetjs-js-xlsx" target="_blank">SheetJS js-xlsx</a> - full description of js-xlsx which this node is based on.</li>
+        <li><a href="https://github.com/sakai-to/node-red-contrib-spreadsheet-in" target="_blank">GitHub</a> - the nodes github repository.</li>
+    </ul>
+</script>
