@@ -30,7 +30,7 @@
     }
   },
   "dependencies": {
-    "xlsx": "^0.11.2"
+    "xlsx": ">=0.11.2"
   },
   "devDependencies": {
     "mocha": "^5.2.0",
