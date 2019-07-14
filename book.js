@@ -10,6 +10,7 @@ module.exports = function(RED) {
 				raw: false,
 				// dateNF: "yyyy-mm-dd",
 				password: undefined,
+				cellNF: true,
 				WTF: true,
 			};
 			msg.payload = XLSX.read(msg.payload, option);
