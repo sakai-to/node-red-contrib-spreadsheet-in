@@ -15,4 +15,3 @@ You can also import the example flow from `examples/example.json` to your Node-R
 ## ToDo
 
 - Add useful properties for nodes
-- Internationalization for labels
