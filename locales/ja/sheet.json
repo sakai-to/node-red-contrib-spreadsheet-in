@@ -1,0 +1,10 @@
+{
+    "sheet": {
+        "label": {
+            "sheetName": "シート名"
+        },
+        "placeholder": {
+            "sheetName": "シート1"
+        }
+    }
+}

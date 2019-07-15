@@ -1,0 +1,25 @@
+{
+    "sheet-to-json": {
+        "label": {
+            "raw": "データタイプ",
+            "range": "範囲",
+            "header": "ヘッダー",
+            "blankrows": "空行"
+        },
+        "placeholder": {
+            "range": "A1:B2"
+        },
+        "raw": {
+            "false": "表示されるテキスト",
+            "true": "生データ"
+        },
+        "header": {
+            "1": "配列の配列を生成",
+            "A": "行オブジェクトのキーは列ラベル文字",
+            "default": "曖昧さのない最初の行をキーとして読み込む"
+        },
+        "blankrows": {
+            "include": "空行を出力に含める"
+        }
+    }
+}

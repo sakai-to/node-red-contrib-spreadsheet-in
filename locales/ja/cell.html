@@ -1,0 +1,31 @@
+<script type="text/x-red" data-help-name="cell">
+    <p>シートオブジェクトからセルの値を取り出します。</p>
+
+    <h3>入力</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">object</span>
+        </dt>
+        <dd>sheetノードからのシートオブジェクト。</dd>
+        <dt class="optional">selectAddress <span class="property-type">string</span></dt>
+        <dd>セルのアドレスプロパティがこのノードで設定されていない場合、このオプションプロパティはA1形式のセルのアドレスを設定します。</dd>
+    </dl>
+
+    <h3>出力</h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">any</span></dt>
+        <dd>データタイププロパティの選択に応じたセルの値。</dd>
+        <dt>selectedAddress <span class="property-type">string</span></dt>
+        <dd>値を取り出したセルのA1形式のアドレス。</dd>
+    </dl>
+
+    <h3>詳細</h3>
+    <p>セルのアドレスプロパティまたは<code>msg.selectAddress</code>プロパティには、A1形式のセルのアドレスを設定します。</p>
+    <p>データタイププロパティの詳細については、<a href="https://sheetjs.gitbooks.io/docs/#cell-object" target="_blank">js-xlsxの記述</a>を参照してください。</p>
+
+    <h3>参照</h3>
+    <ul>
+        <li><a href="https://sheetjs.gitbooks.io/docs/#sheetjs-js-xlsx" target="_blank">SheetJS js-xlsx</a> - このノードがベースとしているjs-xlsxの詳細。</li>
+        <li><a href="https://github.com/sakai-to/node-red-contrib-spreadsheet-in" target="_blank">GitHub</a> - このノードのGitHubリポジトリ。</li>
+    </ul>
+</script>
