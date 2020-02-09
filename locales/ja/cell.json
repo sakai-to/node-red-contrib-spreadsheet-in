@@ -2,7 +2,9 @@
     "cell": {
         "label": {
             "address": "セルのアドレス",
-            "dataType": "データタイプ"
+            "dataType": "データタイプ",
+            "sheetObject": "シートオブジェクト",
+            "cellValue": "セルの値"
         },
         "placeholder": {
             "address": "A1"

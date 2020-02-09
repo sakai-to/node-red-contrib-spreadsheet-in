@@ -1,7 +1,9 @@
 {
     "sheet": {
         "label": {
-            "sheetName": "シート名"
+            "sheetName": "シート名",
+            "workbookObject": "ワークブックオブジェクト",
+            "sheetObject": "シートオブジェクト"
         },
         "placeholder": {
             "sheetName": "シート1"

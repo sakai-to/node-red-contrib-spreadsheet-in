@@ -12,6 +12,12 @@
         icon: "font-awesome/fa-square-o",
         label: function() {
             return this.name||"cell";
+        },
+        inputLabels: function() {
+            return this._("cell.label.sheetObject");
+        },
+        outputLabels: function () {
+            return this._("cell.label.cellValue");
         }
     });
 </script>

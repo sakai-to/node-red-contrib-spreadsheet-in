@@ -4,7 +4,9 @@
             "raw": "データタイプ",
             "range": "範囲",
             "header": "ヘッダー",
-            "blankrows": "空行"
+            "blankrows": "空行",
+            "sheetObject": "シートオブジェクト",
+            "cellValues": "セルの値"
         },
         "placeholder": {
             "range": "A1:B2"

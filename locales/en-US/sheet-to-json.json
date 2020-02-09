@@ -4,7 +4,9 @@
             "raw": "Data type",
             "range": "Range",
             "header": "Header",
-            "blankrows": "Blank rows"
+            "blankrows": "Blank rows",
+            "sheetObject": "Sheet object",
+            "cellValues": "Cell values"
         },
         "placeholder": {
             "range": "A1:B2"

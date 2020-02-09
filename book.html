@@ -10,6 +10,12 @@
         icon: "font-awesome/fa-file-excel-o",
         label: function() {
             return this.name||"book";
+        },
+        inputLabels: function() {
+            return this._("book.label.binaryBuffer");
+        },
+        outputLabels: function () {
+            return this._("book.label.workbookObject");
         }
     });
 </script>

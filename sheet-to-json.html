@@ -14,6 +14,12 @@
         icon: "font-awesome/fa-sign-out",
         label: function() {
             return this.name||"sheet to json";
+        },
+        inputLabels: function() {
+            return this._("sheet-to-json.label.sheetObject");
+        },
+        outputLabels: function () {
+            return this._("sheet-to-json.label.cellValues");
         }
     });
 </script>

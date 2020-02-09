@@ -11,6 +11,12 @@
         icon: "font-awesome/fa-table",
         label: function() {
             return this.name||"sheet";
+        },
+        inputLabels: function() {
+            return this._("sheet.label.workbookObject");
+        },
+        outputLabels: function () {
+            return this._("sheet.label.sheetObject");
         }
     });
 </script>

@@ -2,7 +2,9 @@
     "cell": {
         "label": {
             "address": "Cell address",
-            "dataType": "Data type"
+            "dataType": "Data type",
+            "sheetObject": "Sheet object",
+            "cellValue": "Cell value"
         },
         "placeholder": {
             "address": "A1"

@@ -1,7 +1,9 @@
 {
     "sheet": {
         "label": {
-            "sheetName": "Sheet name"
+            "sheetName": "Sheet name",
+            "workbookObject": "Workbook object",
+            "sheetObject": "Sheet object"
         },
         "placeholder": {
             "sheetName": "Sheet1"
