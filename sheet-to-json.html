@@ -15,6 +15,9 @@
         label: function() {
             return this.name||"sheet to json";
         },
+        labelStyle: function() {
+            return this.name?"node_label_italic":"";
+        },
         inputLabels: function() {
             return this._("sheet-to-json.label.sheetObject");
         },
