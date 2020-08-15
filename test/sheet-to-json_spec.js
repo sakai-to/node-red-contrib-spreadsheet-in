@@ -167,4 +167,38 @@ describe('sheet-to-json Node', function () {
         });
     });
 
+    it('should convert a whole CSV values to an array of JSON objects, with the exact strings written in CSV file', function (done) {
+        var flow = [
+            { id: "n1", type: "book", name: "book1", wires: [["n2"]], raw: true },
+            { id: "n2", type: "sheet", name: "sheet1", wires: [["n3"]], sheetName: "Sheet1" },
+            { id: "n3", type: "sheet-to-json", name: "sheet-to-json1", wires: [["n4"]], raw: true, range: "", header: "default", blankrows: false },
+            { id: "n4", type: "helper" }
+        ];
+        helper.load([bookNode, sheetNode, sheetToJsonNode], flow, function () {
+            var n4 = helper.getNode("n4");
+            n4.on("input", function (msg) {
+                try {
+                    msg.should.have.property('payload').eql([
+                        {
+                            Timestamp: "2020-07-09T20:00:07.000Z",
+                            Humidity: "37.57400131",
+                            Pressure: "992.5411987",
+                            PM1: "16.66666667",
+                            PM2_5: "21",
+                            PM10: "21.66666667",
+                            Temperature: "35.34999847",
+                            DateTime: "1594324807.00",
+                        }
+                    ]);
+                    done();
+                } catch (e) {
+                    done(e);
+                }
+            });
+            var n1 = helper.getNode("n1");
+            var data = fs.readFileSync(__dirname + "/time_issue.csv");
+            n1.receive({ payload: data });
+        });
+    });
+
 });

@@ -3,7 +3,8 @@
         category: 'Spreadsheet',
         color: "#DEBD5C",
         defaults: {
-            name: {value:""}
+            name: {value:""},
+            raw: {value:false}
         },
         inputs:1,
         outputs:1,
@@ -27,5 +28,10 @@
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> <span data-i18n="node-red:common.label.name"></span></label>
         <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
+    </div>
+    <div class="form-row">
+        <label><i class="fa fa-sign-out"></i> <span data-i18n="book.label.parse"></span></label>
+        <input type="checkbox" id="node-input-raw" style="width:auto">
+        <label for="node-input-raw" style="width:auto" data-i18n="book.label.raw"></label>
     </div>
 </script>

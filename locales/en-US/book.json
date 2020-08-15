@@ -2,7 +2,9 @@
     "book": {
         "label": {
             "binaryBuffer": "Binary buffer",
-            "workbookObject": "Workbook object"
+            "workbookObject": "Workbook object",
+            "parse": "Parse",
+            "raw": "Plain text parsing will not parse values"
         }
     }
 }
