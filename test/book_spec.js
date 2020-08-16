@@ -76,7 +76,7 @@ describe('book Node', function () {
             var n2 = helper.getNode("n2");
             n2.on("input", function (msg) {
                 try {
-                    msg.should.have.propertyByPath('payload', 'Sheets', 'Sheet1', 'A2', 'v').equal(44022.20841435185);
+                    msg.should.have.propertyByPath('payload', 'Sheets', 'Sheet1', 'A2', 'v').equal(44021.83341435185 - new Date().getTimezoneOffset() / 60 / 24);
                     done();
                 } catch (e) {
                     done(e);
