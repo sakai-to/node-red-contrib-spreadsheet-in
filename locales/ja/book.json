@@ -2,7 +2,9 @@
     "book": {
         "label": {
             "binaryBuffer": "バイナリバッファ",
-            "workbookObject": "ワークブックオブジェクト"
+            "workbookObject": "ワークブックオブジェクト",
+            "parse": "解析",
+            "raw": "プレーンテキストの値を解析しない"
         }
     }
 }
