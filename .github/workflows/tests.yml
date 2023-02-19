@@ -21,7 +21,7 @@ jobs:
         - node-red-version: 2
           node-version: 12
         - node-red-version: 1
-          node-version: 8
+          node-version: 10
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
