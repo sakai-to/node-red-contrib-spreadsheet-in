@@ -1,0 +1,36 @@
+name: Run tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    permissions:
+      checks: write  # for coverallsapp/github-action to create new checks
+      contents: read  # for actions/checkout to fetch code
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+        - node-red-version: 3
+          node-version: 14
+        - node-red-version: 2
+          node-version: 12
+        - node-red-version: 1
+          node-version: 8
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install Dependencies
+      run: |
+        npm install
+        npm install node-red@${{ matrix.node-red-version}}
+    - name: Run tests
+      run: npm test
