@@ -97,7 +97,8 @@ describe('book Node', function () {
             var n2 = helper.getNode("n2");
             n2.on("input", function (msg) {
                 try {
-                    msg.should.have.propertyByPath('payload', 'Sheets', 'Sheet1', 'A2', 'v').equal('2020-07-09T20:00:07.000Z');
+                    const expected = process.version >= 'v12' ? '2020-07-09T20:00:07.000Z' : 44021.83341435185;
+                    msg.should.have.propertyByPath('payload', 'Sheets', 'Sheet1', 'A2', 'v').equal(expected);
                     done();
                 } catch (e) {
                     done(e);
