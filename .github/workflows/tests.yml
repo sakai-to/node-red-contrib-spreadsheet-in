@@ -17,11 +17,17 @@ jobs:
       matrix:
         include:
         - node-red-version: 3
+          node-version: 20
+        - node-red-version: 3
+          node-version: 18
+        - node-red-version: 3
+          node-version: 16
+        - node-red-version: 3
           node-version: 14
         - node-red-version: 2
           node-version: 12
         - node-red-version: 1
-          node-version: 10
+          node-version: 12
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
