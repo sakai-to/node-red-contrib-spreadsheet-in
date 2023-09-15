@@ -2,7 +2,7 @@
 
 This package provides Node-RED nodes to read data from spreadsheet (Excel, ODS, etc.) file.
 
-[![Build Status](https://travis-ci.org/sakai-to/node-red-contrib-spreadsheet-in.svg?branch=master)](https://travis-ci.org/sakai-to/node-red-contrib-spreadsheet-in)
+[![Run tests](https://github.com/sakai-to/node-red-contrib-spreadsheet-in/actions/workflows/tests.yml/badge.svg)](https://github.com/sakai-to/node-red-contrib-spreadsheet-in/actions/workflows/tests.yml)
 
 ## Usage
 
