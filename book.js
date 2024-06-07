@@ -12,7 +12,7 @@ module.exports = function(RED) {
 				password: undefined,
 				cellNF: true,
 				cellStyles: true,
-				WTF: true,
+				WTF: false,
 			};
 			msg.payload = XLSX.read(msg.payload, option);
 			node.send(msg);

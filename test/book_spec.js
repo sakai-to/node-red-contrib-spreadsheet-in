@@ -110,4 +110,20 @@ describe('book Node', function () {
         });
     });
 
+    it('should parse an old format XLS file (pre-2007)', function (done) {
+        var flow = [
+            { id: "n1", type: "book", name: "book1", wires: [["n2"]] },
+            { id: "n2", type: "helper" }
+        ];
+        helper.load(bookNode, flow, function () {
+            var n1 = helper.getNode("n1");
+            var n2 = helper.getNode("n2");
+            n2.on("input", function (msg) {
+                done();
+            });
+            var data = fs.readFileSync(__dirname + "/pre-2007.xlsx");
+            n1.receive({ payload: data });
+        });
+    });
+
 });
