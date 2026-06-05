@@ -1,26 +1,29 @@
 {
-  "name": "node-red-contrib-spreadsheet-in",
-  "version": "0.7.2",
-  "description": "This package provides Node-RED nodes to read data from spreadsheet (Excel, ODS, etc.) file.",
+  "name": "node-red-contrib-spreadsheet",
+  "version": "1.0.0",
+  "description": "Enhanced Node-RED nodes to read data from spreadsheet (Excel, ODS, etc.) files with dynamic sheet name selection via msg.sheetName.",
   "main": "node.js",
   "scripts": {
     "test": "mocha \"test/**/*_spec.js\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sakai-to/node-red-contrib-spreadsheet-in.git"
+    "url": "git+https://github.com/lordnetro/node-red-contrib-spreadsheet.git"
   },
   "keywords": [
     "node-red",
     "spreadsheet",
-    "excel"
+    "excel",
+    "ods",
+    "sheet",
+    "dynamic-sheet"
   ],
-  "author": "sakai.to",
+  "author": "Marc Ortiz Lopez",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/sakai-to/node-red-contrib-spreadsheet-in/issues"
+    "url": "https://github.com/lordnetro/node-red-contrib-spreadsheet/issues"
   },
-  "homepage": "https://github.com/sakai-to/node-red-contrib-spreadsheet-in#readme",
+  "homepage": "https://github.com/lordnetro/node-red-contrib-spreadsheet#readme",
   "node-red": {
     "nodes": {
       "book": "book.js",

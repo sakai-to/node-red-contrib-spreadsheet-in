@@ -67,4 +67,24 @@ describe('sheet Node', function () {
         });
     });
 
+    it('should pick the sheet object specified in msg object (msg.sheetName)', function (done) {
+        var flow = [
+            { id: "n1", type: "book", name: "book1", wires: [["n2"]] },
+            { id: "n2", type: "sheet", name: "sheet1", wires: [["n3"]], sheetName: "WrongSheet" },
+            { id: "n3", type: "helper" }
+        ];
+        helper.load([bookNode, sheetNode], flow, function () {
+            var n3 = helper.getNode("n3");
+            n3.on("input", function (msg) {
+                msg.should.have.property('selectedSheetName', "Sheet1");
+                msg.should.have.propertyByPath('payload', '!ref').eql("A1:C3");
+                msg.should.not.have.property('sheetName');
+                done();
+            });
+            var n1 = helper.getNode("n1");
+            var data = fs.readFileSync(__dirname + "/example.xlsx");
+            n1.receive({ payload: data, sheetName: "Sheet1" });
+        });
+    });
+
 });

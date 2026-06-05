@@ -4,7 +4,8 @@
         color: "#DEBD5C",
         defaults: {
             name: {value:""},
-            sheetName: {value:"Sheet1"}
+            sheetName: {value:"Sheet1"},
+            sheetNameType: {value:"str"}
         },
         inputs:1,
         outputs:1,
@@ -20,6 +21,16 @@
         },
         outputLabels: function () {
             return this._("sheet.label.sheetObject");
+        },
+        oneditprepare: function() {
+            if (!this.sheetNameType) {
+                this.sheetNameType = 'str';
+            }
+            $("#node-input-sheetName").typedInput({
+                default: 'str',
+                typeField: $("#node-input-sheetNameType"),
+                types: ['str', 'msg']
+            });
         }
     });
 </script>
@@ -32,5 +43,6 @@
     <div class="form-row">
         <label for="node-input-sheetName"><i class="icon-tag"></i> <span data-i18n="sheet.label.sheetName"></span></label>
         <input type="text" id="node-input-sheetName" data-i18n="[placeholder]sheet.placeholder.sheetName">
+        <input type="hidden" id="node-input-sheetNameType">
     </div>
 </script>

@@ -34,7 +34,7 @@ If applicable, attach spreadsheet files to help explain your problem.
  - OS: [e.g. iOS]
  - Node-RED version: [e.g. v3.1.9]
  - Node.js version: [e.g. v22.2.0]
- - node-red-contrib-spreadsheet-in version: [e.g. 0.7.2]
+  - node-red-contrib-spreadsheet version: [e.g. 1.0.0]
 
 **Additional context**
 Add any other context about the problem here.
